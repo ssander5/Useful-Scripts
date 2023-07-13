@@ -1,0 +1,5 @@
+awk '{
+        if (substr($0, 1, 1)==">") {filename=(substr($1,2) ".fasta")}
+        print $0 >> filename
+        close(filename)
+}'
